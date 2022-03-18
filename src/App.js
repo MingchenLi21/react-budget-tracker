@@ -7,17 +7,15 @@ import ExpenseList from "./components/ExpenseList";
 import AddExpenseForm from "./components/AddExpenseForm"
 import { AppProvider } from "./context/AppContext";
 import StackedBar from "./components/StackedBar";
+import PieChart from "./components/PieChart";
+import AnalysisCharts from "./components/AnalysisCharts";
 
 
 const App = () => {
   return (
     <AppProvider>
       <div className="container">
-        <h1 className="mt-3">My Budget Planner</h1>
-        <div class="input-group">
-          <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-          <button type="button" class="btn btn-outline-primary">search</button>
-        </div>
+        <h1 className="mt-3">My Yearly Budget Planner</h1>
 
         <div className="row mt-3">
           <div className="col-sm">
@@ -45,7 +43,7 @@ const App = () => {
           </div>
         </div>
         <div>
-          <StackedBar />
+          <AnalysisCharts />
         </div>
       </div>
     </AppProvider>
