@@ -20,10 +20,10 @@ const AppReducer = ( state, action ) => {
 const initialState = {
     budget: 1000,
     expenses: [
-        { id: 10, name: "shopping", cost: 40 },
-        { id: 11, name: "travelling", cost: 400 },
-        { id: 12, name: "holiday", cost: 40 },
-        { id: 13, name: "utility", cost: 50 }
+        { id: 10, category: "shopping", name: "shopping", date: new Date("2022-05-17"), cost: 40 },
+        { id: 11, category: "test1", name: "travelling", date: new Date("2022-01-17"), cost: 400 },
+        { id: 12, category: "grocery", name: "holiday", date: new Date("2022-02-17"), cost: 40 },
+        { id: 13, category: "gas", name: "utility", date: new Date("2022-06-17"), cost: 50 }
     ],
 };
 
@@ -35,6 +35,8 @@ export const AppProvider = ( props ) => {
     return ( <AppContext.Provider value={ {
         budget: state.budget,
         expenses: state.expenses,
+        category: state.category,
+        date: state.date,
         dispatch,
     } }>
         { props.children }

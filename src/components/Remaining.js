@@ -12,7 +12,7 @@ const Remaining = () => {
     return (
         <div className={`alert ${alertType}`}>
             <span>
-                Remaining: ${budget - totalExpenses}
+                Remaining: ${(budget - totalExpenses).toFixed(2)}
             </span>
         </div>
     );

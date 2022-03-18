@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import {TiDelete} from "react-icons/ti";
 import { AppContext } from "../context/AppContext";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const ExpenseItem = (props) => {
     const{ dispatch } = useContext(AppContext);
@@ -11,10 +12,14 @@ const ExpenseItem = (props) => {
             payload: props.id,
         })
     }
+    
     return (
         <li className="list-group-item d-flex justify-content-between align-items-center">
             {props.name}
+            <div >{props.category}</div>
+            <div >{props.date}</div>
             <div>
+
                 <span className="badge bg-primary badge-pill mr-3"> 
                     ${props.cost}
                 </span>
