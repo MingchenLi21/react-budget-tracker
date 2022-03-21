@@ -9,11 +9,11 @@ const CategoryFilter = ( props ) => {
 
 
     return (
-        <form onSubmit={()=> null}>
-            <label>
+        <form  onSubmit={()=> null}>
+            <label for="selectCategory">
                 Filter by category:
-                <select onChange={handleChange}>
-                    <option value={"null"}> </option>
+                <select class="form-select form-select-sm" onChange={handleChange} name="selectCategory" id="selectCategory">
+                    <option value={"null"}>Select a category</option>
                     {
                         categories.map(category =>
                             <option value={category}>{category}</option>)

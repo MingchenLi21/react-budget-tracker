@@ -15,9 +15,9 @@ const ExpenseItem = (props) => {
     
     return (
         <li className="list-group-item d-flex justify-content-between align-items-center">
-            {props.name}
-            <div >{props.category}</div>
-            <div >{props.date}</div>
+            <div class="col">{props.name}</div>
+            <div class="col">{props.category}</div>
+            <div class="col">{props.date}</div>
             <div>
 
                 <span className="badge bg-primary badge-pill mr-3"> 

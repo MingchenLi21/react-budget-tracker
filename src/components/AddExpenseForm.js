@@ -59,7 +59,7 @@ const AddExpenseForm = () => {
                 </div>
 
                 <div className="col-sm">
-                    <label for="cost">Date</label>
+                    <label for="date">Date</label>
                     <input
                         required="required"
                         type="date"
@@ -84,8 +84,8 @@ const AddExpenseForm = () => {
                         ></input>
                 </div>
                 
-                <div className="col-sm">
-                    <button type="submit" className="btn btn-primary">
+                <div className="col-sm ">
+                    <button type="submit" className="btn btn-primary ">
                         Save
                     </button>
                 </div>

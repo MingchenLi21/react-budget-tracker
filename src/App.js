@@ -15,7 +15,7 @@ const App = () => {
   return (
     <AppProvider>
       <div className="container">
-        <h1 className="mt-3">My Yearly Budget Planner</h1>
+        <h1 className="mt-3  text-center">My Yearly Budget Planner</h1>
 
         <div className="row mt-3">
           <div className="col-sm">

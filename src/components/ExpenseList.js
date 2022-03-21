@@ -10,7 +10,7 @@ const ExpenseList = () => {
     expenses.sort((a,b) => b.date - a.date);
     return (
         <div>
-            <ul className="list-group">
+            <ul className="list-group list-group-numbered">
                 {expenses.filter(expense => filtered === "null" ? true : expense.category ===filtered).map((expense) => (
                     <ExpenseItem
                         id={expense.id}
