@@ -1,6 +1,5 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Bar } from 'react-chartjs-2';
-import { AppContext } from "../context/AppContext";
 import {
     Chart as ChartJS,
     CategoryScale,

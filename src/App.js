@@ -3,20 +3,23 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Budget from "./components/Budget";
 import Remaining from "./components/Remaining";
 import ExpenseTotal from "./components/ExpenseTotal";
-import ExpenseList from "./components/ExpenseList";
+import ExpenseList from "./components/expensesList/ExpenseList";
 import AddExpenseForm from "./components/AddExpenseForm"
 import { AppProvider } from "./context/AppContext";
-import StackedBar from "./components/StackedBar";
-import PieChart from "./components/PieChart";
-import AnalysisCharts from "./components/AnalysisCharts";
-
+import AnalysisCharts from "./components/analysisCharts/AnalysisCharts";
+import Nav_ from "./components/nav/Nav_";
+import {Flasher} from "react-universal-flash";
+import DailyJokes from "./components/DailyJokes";
 
 const App = () => {
   return (
     <AppProvider>
+      <Flasher position="top_center"/>
+      <Nav_ />
+      
       <div className="container">
         <h1 className="mt-3  text-center">My Yearly Budget Planner</h1>
-
+        <DailyJokes />
         <div className="row mt-3">
           <div className="col-sm">
             <Budget />

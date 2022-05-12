@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import ExpenseItem from "./ExpenseItem";
-import { AppContext } from "../context/AppContext";
-import CategoryFilter from "./CategoryFilter";
+import { AppContext } from "../../context/AppContext";
+import CategoryFilter from "../CategoryFilter";
 
 
 const ExpenseList = () => {
@@ -13,10 +13,11 @@ const ExpenseList = () => {
             <ul className="list-group list-group-numbered">
                 {expenses.filter(expense => filtered === "null" ? true : expense.category ===filtered).map((expense) => (
                     <ExpenseItem
-                        id={expense.id}
+                        key={expense._id}
+                        id={expense._id}
                         category={expense.category}
                         name={expense.name}
-                        cost={expense.cost}
+                        cost={expense.amount}
                         date={expense.date.toDateString()} />
                 ))}
             </ul>

@@ -1,5 +1,5 @@
-import { AppContext } from "../context/AppContext";
-import React, { useContext, useState } from "react";
+import { AppContext } from "../../context/AppContext";
+import React, { useContext } from "react";
 import StackedBar from "./StackedBar";
 import PieChart from "./PieChart";
 
@@ -18,7 +18,7 @@ const AnalysisCharts = (props) =>{
     });
 
     expenses.forEach((expense) => {
-        costByCategoryAndMonth[expense.category][expense.date.getMonth()] += expense.cost;
+        costByCategoryAndMonth[expense.category][expense.date.getMonth()] += expense.amount;
     });
 
 

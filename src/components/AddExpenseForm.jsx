@@ -9,7 +9,7 @@ const AddExpenseForm = () => {
     // state value and a function that lets you update it.
     // The only argument to useState is the initial state. 
     const [name, setName] = useState("");
-    const [cost, setCost] = useState("");
+    const [amount, setAmount] = useState(0);
     const [category, setCategory] = useState("");
     const [date, setDate] = useState("");
     
@@ -17,10 +17,10 @@ const AddExpenseForm = () => {
         event.preventDefault();
         
         const expense = {
-            id: uuidv4(),
+            _id: uuidv4(),
             name: name,
             category: category,
-            cost: parseFloat(cost),
+            amount: parseFloat(amount),
             date: new Date(date),
         };
 
@@ -35,7 +35,7 @@ const AddExpenseForm = () => {
         <form onSubmit={onSubmit}>
             <div className="row">
                 <div className="col-sm">
-                    <label for="name">Name</label>
+                    <label htmlFor="name">Name</label>
                     <input
                         required="required"
                         type="text"
@@ -47,7 +47,7 @@ const AddExpenseForm = () => {
                 </div>
 
                 <div className="col-sm">
-                    <label for="category">Category</label>
+                    <label htmlFor="category">Category</label>
                     <input
                         required="required"
                         type="search"
@@ -59,7 +59,7 @@ const AddExpenseForm = () => {
                 </div>
 
                 <div className="col-sm">
-                    <label for="date">Date</label>
+                    <label htmlFor="date">Date</label>
                     <input
                         required="required"
                         type="date"
@@ -73,18 +73,18 @@ const AddExpenseForm = () => {
                 </div>
 
                 <div className="col-sm">
-                    <label for="cost">Cost</label>
+                    <label htmlFor="cost">Amount</label>
                     <input
                         required="required"
                         type="number"
                         className="form-control"
-                        id="cost"
-                        value={cost}
-                        onChange={(event) => setCost(event.target.value)}
+                        id="Amount"
+                        value={""}
+                        onChange={(event) => setAmount(event.target.value)}
                         ></input>
                 </div>
                 
-                <div className="col-sm ">
+                <div className="col-sm ml-bt">
                     <button type="submit" className="btn btn-primary ">
                         Save
                     </button>

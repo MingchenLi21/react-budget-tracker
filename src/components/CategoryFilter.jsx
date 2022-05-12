@@ -10,13 +10,13 @@ const CategoryFilter = ( props ) => {
 
     return (
         <form  onSubmit={()=> null}>
-            <label for="selectCategory">
+            <label htmlFor="selectCategory">
                 Filter by category:
-                <select class="form-select form-select-sm" onChange={handleChange} name="selectCategory" id="selectCategory">
-                    <option value={"null"}>Select a category</option>
+                <select className="form-select form-select-sm" onChange={handleChange} name="selectCategory" id="selectCategory">
+                    <option key={"null"} value={"null"}>Select a category</option>
                     {
                         categories.map(category =>
-                            <option value={category}>{category}</option>)
+                            <option value={category} key={category}>{category}</option>)
                     }
                 </select>
             </label>
