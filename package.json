@@ -36,10 +36,7 @@
   "scripts": {
     "start": "nodemon server/app.js",
     "build": "react-scripts build",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install npm && run build"
-  },
-  "engines": {
-    "node": "17.7.1"
+    "heroku-postbuild": "run build"
   },
   "eslintConfig": {
     "extends": [
