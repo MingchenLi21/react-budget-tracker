@@ -10,8 +10,6 @@ const bodyParser = require( "body-parser" );
 const MongoStore = require( "connect-mongo" );
 const mongoose = require( "mongoose" );
 const dbUrl = process.env.DB_URL || "mongodb://localhost:27017/budgetApp";
-const dotenv = require("dotenv");
-dotenv.config();
 
 mongoose.connect( dbUrl )
     .then( () => {
@@ -56,7 +54,6 @@ const sessionConfig = {
     }
 }
 app.use( session( sessionConfig ) );
-app.use(express.static(path.join(__dirname, '../build')))
 
 app.use( passport.initialize() );
 app.use( passport.session() );
@@ -131,11 +128,11 @@ app.post( "/api/logout", isLoggedIn, ( req, res ) => {
     res.send( "Logged out!" );
 } );
 
-
+app.use(express.static(path.resolve(__dirname, '../build')))
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../build', "index.html"))
+    res.sendFile(path.resolve(__dirname, '../build', "index.html"))
 })
 
-const port = process.env.PORT || 9000;
+const port = process.env.PORT || 5000;
 
 app.listen( port, () => { console.log( `Listening on port ${port}` ) } );
