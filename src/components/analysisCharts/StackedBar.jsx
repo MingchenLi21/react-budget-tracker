@@ -25,7 +25,7 @@ import {
         plugins: {
         title: {
             display: true,
-            text: 'Expense',
+            text: 'stacked bar',
         },
         },
         responsive: true,

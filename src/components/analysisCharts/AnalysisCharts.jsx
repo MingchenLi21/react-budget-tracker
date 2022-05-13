@@ -21,10 +21,9 @@ const AnalysisCharts = (props) =>{
         costByCategoryAndMonth[expense.category][expense.date.getMonth()] += expense.amount;
     });
 
-
-
     return (
       <div>
+          <h2 className="mt-3  text-center">Expenses by Months</h2>
           <StackedBar categories = {categories} colors={colors} costByCategoryAndMonth={costByCategoryAndMonth}/>
           <PieChart categories = {categories} colors={colors} costByCategoryAndMonth={costByCategoryAndMonth}/>
       </div>  

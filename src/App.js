@@ -8,18 +8,17 @@ import AddExpenseForm from "./components/AddExpenseForm"
 import { AppProvider } from "./context/AppContext";
 import AnalysisCharts from "./components/analysisCharts/AnalysisCharts";
 import Nav_ from "./components/nav/Nav_";
-import {Flasher} from "react-universal-flash";
-import DailyJokes from "./components/DailyJokes";
+import WelcomeBoard from "./components/WelcomeBoard";
 
 const App = () => {
   return (
     <AppProvider>
-      <Flasher position="top_center"/>
+
       <Nav_ />
-      
+
       <div className="container">
-        <h1 className="mt-3  text-center">My Yearly Budget Planner</h1>
-        <DailyJokes />
+        <WelcomeBoard />
+
         <div className="row mt-3">
           <div className="col-sm">
             <Budget />

@@ -73,13 +73,12 @@ const AddExpenseForm = () => {
                 </div>
 
                 <div className="col-sm">
-                    <label htmlFor="cost">Amount</label>
+                    <label htmlFor="Amount">Amount</label>
                     <input
                         required="required"
                         type="number"
                         className="form-control"
                         id="Amount"
-                        value={""}
                         onChange={(event) => setAmount(event.target.value)}
                         ></input>
                 </div>
