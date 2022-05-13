@@ -54,6 +54,7 @@ const sessionConfig = {
     }
 }
 app.use( session( sessionConfig ) );
+app.use(express.static(path.join(__dirname, '../build')))
 
 app.use( passport.initialize() );
 app.use( passport.session() );
@@ -128,9 +129,9 @@ app.post( "/api/logout", isLoggedIn, ( req, res ) => {
     res.send( "Logged out!" );
 } );
 
-app.use(express.static(path.join(__dirname, '../build')))
+
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../build'))
+    res.sendFile(path.join(__dirname, '../build', "index.html"))
 })
 
 const port = process.env.PORT || 9000;
