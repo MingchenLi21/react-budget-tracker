@@ -1,3 +1,8 @@
+if (process.env.NODE_ENV !== "production") {
+    require('dotenv').config();
+}
+
+
 const express = require( "express" );
 const session = require( "express-session" );
 const passport = require( "passport" );
@@ -128,9 +133,9 @@ app.post( "/api/logout", isLoggedIn, ( req, res ) => {
     res.send( "Logged out!" );
 } );
 
-app.use(express.static(path.resolve(__dirname, '../build')))
+app.use(express.static(path.join(__dirname, '../build')))
 app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../build', "index.html"))
+    res.sendFile(path.join(__dirname, '../build', "index.html"))
 })
 
 const port = process.env.PORT || 5000;

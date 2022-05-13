@@ -2,6 +2,7 @@
   "name": "budget-tracker",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
   "proxy": "http://localhost:5000",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
@@ -35,7 +36,10 @@
   },
   "scripts": {
     "start": "node ./server/app.js",
+    "server": "nodemon ./server/app.js",
     "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
     "heroku-postbuild": "npm run build"
   },
   "eslintConfig": {
