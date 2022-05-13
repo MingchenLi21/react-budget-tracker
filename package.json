@@ -13,6 +13,7 @@
     "chart.js": "^3.7.1",
     "connect-mongo": "^4.6.0",
     "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "express-session": "^1.17.2",
     "mongoose": "^6.3.2",
@@ -33,9 +34,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start" : "nodemon server/app.js",
+    "start": "nodemon server/app.js",
     "build": "react-scripts build",
-    "heroku-postbuild": "npm install && npm run build"
+    "heroku-postbuild": "npm run build"
   },
   "eslintConfig": {
     "extends": [

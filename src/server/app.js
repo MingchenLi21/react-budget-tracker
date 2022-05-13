@@ -10,6 +10,8 @@ const bodyParser = require( "body-parser" );
 const MongoStore = require( "connect-mongo" );
 const mongoose = require( "mongoose" );
 const dbUrl = process.env.DB_URL || "mongodb://localhost:27017/budgetApp";
+const dotenv = require("dotenv");
+dotenv.config();
 
 mongoose.connect( dbUrl )
     .then( () => {
